@@ -1,10 +1,16 @@
 ﻿using System;
+using CROAnalytics.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
 namespace CROAnalyticsAPI.Entities
 {
-    public class AnalyticsAPIContext
+    public class AnalyticsAPIContext : IdentityDbContext
     {
-        public AnalyticsAPIContext()
+        public AnalyticsAPIContext(DbContextOptions<AnalyticsAPIContext> options) : base(options)
         {
         }
+
+        public DbSet<User> Users { get; set; }
     }
 }

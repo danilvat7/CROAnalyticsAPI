@@ -1,19 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+using CROAnalyticsAPI.Services;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CROAnalyticsAPI.Controllers
 {
+
+    [Route("api/auth")]
     public class AuthenticationController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
+        private readonly IAuthenticationService _authenticationService;
+
+        public AuthenticationController(IAuthenticationService authenticationService)
         {
-            return View();
+            _authenticationService = authenticationService;
         }
+        //public IActionResult Login(string username, string password)
+        //{
+
+        //}
+
+        //public IActionResult Register(string username, string password)
+        //{
+
+        //}
     }
 }

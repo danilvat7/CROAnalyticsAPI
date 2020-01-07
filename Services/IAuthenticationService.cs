@@ -1,10 +1,8 @@
 ﻿using System;
 namespace CROAnalyticsAPI.Services
 {
-    public class IAuthenticationService
+    public interface IAuthenticationService
     {
-        public IAuthenticationService()
-        {
-        }
+
     }
 }
